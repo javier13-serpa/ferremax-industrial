@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ferremax Industrial: herramientas y equipos para tus proyectos.">
+    <title>Ferremax Industrial | Tienda virtual</title>
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenedor barra">
+            <a class="logo" href="#inicio"><span class="logo-icono">FI</span><span>FERREMAX <small>INDUSTRIAL</small></span></a>
+            <nav class="menu">
+                <a href="#inicio">Inicio</a>
+                <a href="#catalogo">Productos</a>
+                <a href="#carrito">Carrito <span id="contador-carrito" class="contador">0</span></a>
+                <a href="#contacto">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="portada">
+            <div class="contenedor portada-contenido">
+                <div>
+                    <p class="etiqueta">EQUIPOS · HERRAMIENTAS · SEGURIDAD</p>
+                    <h1>Todo lo que necesitas para trabajar mejor.</h1>
+                    <p>Encuentra herramientas y equipos industriales de calidad para tus proyectos, talleres y labores de mantenimiento.</p>
+                    <a class="boton boton-primario" href="#catalogo">Explorar productos</a>
+                </div>
+                <div class="portada-sello">SOLUCIONES<br><strong>INDUSTRIALES</strong></div>
+            </div>
+        </section>
+
+        <section class="beneficios">
+            <div class="contenedor beneficios-grid">
+                <article><span>✓</span><div><strong>Calidad</strong><small>Productos seleccionados</small></div></article>
+                <article><span>⚙</span><div><strong>Variedad</strong><small>Para diferentes trabajos</small></div></article>
+                <article><span>🚚</span><div><strong>Envíos</strong><small>Costo visible al comprar</small></div></article>
+            </div>
+        </section>
+
+        <section id="catalogo" class="seccion contenedor">
+            <div class="titulo-seccion">
+                <p class="etiqueta">NUESTRO CATÁLOGO</p>
+                <h2>Herramientas destacadas</h2>
+                <p>Selecciona los productos que necesitas y agrégalos a tu carrito.</p>
+            </div>
+            <div id="lista-productos" class="productos-grid"></div>
+        </section>
+
+        <section id="carrito" class="seccion seccion-clara">
+            <div class="contenedor">
+                <div class="titulo-seccion">
+                    <p class="etiqueta">TU PEDIDO</p>
+                    <h2>Carrito de compras</h2>
+                    <p>Revisa tus productos, cambia las cantidades o elimina los que ya no necesites.</p>
+                </div>
+                <div class="tabla-contenedor">
+                    <table class="tabla-carrito">
+                        <thead>
+                            <tr><th>Producto</th><th>Precio</th><th>Cantidad</th><th>Subtotal</th><th>Acción</th></tr>
+                        </thead>
+                        <tbody id="contenido-carrito">
+                            <tr><td colspan="5" class="carrito-vacio">Tu carrito está vacío.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="resumen">
+                    <p>Unidades: <strong id="total-unidades">0</strong></p>
+                    <p>Subtotal: <strong id="subtotal-general">$0</strong></p>
+                    <p>Envío: <strong id="costo-envio">$0</strong></p>
+                    <p class="total">Total a pagar: <strong id="total-pagar">$0</strong></p>
+                    <div class="acciones-carrito">
+                        <button id="vaciar-carrito" class="boton boton-secundario" type="button">Vaciar carrito</button>
+                        <a id="ir-a-compra" class="boton boton-primario" href="#compra">Continuar compra</a>
+                    </div>
+                    <p id="aviso-carrito" class="aviso" aria-live="polite"></p>
+                </div>
+            </div>
+        </section>
+
+        <section id="compra" class="seccion contenedor">
+            <div class="titulo-seccion">
+                <p class="etiqueta">FINALIZAR PEDIDO</p>
+                <h2>Datos de entrega</h2>
+                <p>Completa tus datos para realizar una simulación de compra.</p>
+            </div>
+            <form id="formulario-compra" class="formulario">
+                <div class="campo">
+                    <label for="nombre">Nombre completo</label>
+                    <input type="text" id="nombre" name="nombre" required placeholder="Escribe tu nombre">
+                </div>
+                <div class="campo">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com">
+                </div>
+                <div class="campo">
+                    <label for="telefono">Número de teléfono</label>
+                    <input type="tel" id="telefono" name="telefono" required placeholder="Tu número de contacto">
+                </div>
+                <div class="campo campo-completo">
+                    <label for="direccion">Dirección de entrega</label>
+                    <input type="text" id="direccion" name="direccion" required placeholder="Dirección donde recibirás el pedido">
+                </div>
+                <div class="campo campo-completo">
+                    <button class="boton boton-primario" type="submit">Confirmar compra simulada</button>
+                    <p id="mensaje-compra" class="aviso" aria-live="polite"></p>
+                </div>
+            </form>
+            <p class="nota">Este sitio es un proyecto académico. No se realizan pagos reales ni se envían pedidos.</p>
+        </section>
+    </main>
+
+    <footer id="contacto" class="pie">
+        <div class="contenedor pie-contenido">
+            <div><a class="logo logo-pie" href="#inicio"><span class="logo-icono">FI</span><span>FERREMAX <small>INDUSTRIAL</small></span></a><p>Herramientas y soluciones para el trabajo industrial.</p></div>
+            <div><strong>Contacto</strong><p>Correo: contacto@ferremaxindustrial.com</p><p>Atención: lunes a viernes de 8:00 AM a 5:00 PM </p></div>
+            <div><strong>Proyecto académico</strong><p>Ingeniería Industrial</p><p>Programación Web</p></div>
+        </div>
+        <div class="copyright">© 2026 Ferremax Industrial. Proyecto académico.</div>
+    </footer>
+
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
+</body>
+</html>
