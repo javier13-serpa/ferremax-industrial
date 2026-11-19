@@ -1,0 +1,87 @@
+/* Estilos generales de Ferremax Industrial */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: Arial, Helvetica, sans-serif; color: #202b36; line-height: 1.6; background: #fff; }
+a { text-decoration: none; color: inherit; }
+button, input { font: inherit; }
+.contenedor { width: 90%; max-width: 1180px; margin: auto; }
+.encabezado { background: #142536; color: white; position: sticky; top: 0; z-index: 10; }
+.barra { min-height: 76px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.logo { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: 1px; }
+.logo small { display: block; font-size: 10px; letter-spacing: 3px; color: #f3b544; }
+.logo-icono { display: grid; place-items: center; width: 42px; height: 42px; border-radius: 9px; background: #f3b544; color: #142536; font-weight: 900; }
+.menu { display: flex; align-items: center; gap: 25px; font-size: 14px; }
+.menu a:hover { color: #f3b544; }
+.contador { display: inline-grid; place-items: center; min-width: 21px; height: 21px; padding: 0 5px; border-radius: 20px; background: #f3b544; color: #142536; font-weight: bold; }
+.portada { color: white; background: linear-gradient(115deg, rgba(13,30,46,.96), rgba(23,55,76,.88)), url("https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=1600&q=85") center/cover; min-height: 430px; display: flex; align-items: center; }
+.portada-contenido { display: flex; justify-content: space-between; align-items: center; gap: 30px; padding: 70px 0; }
+.portada h1 { max-width: 650px; font-size: clamp(36px, 5vw, 58px); line-height: 1.08; margin: 12px 0 18px; }
+.portada p:not(.etiqueta) { max-width: 590px; color: #d9e1e8; margin-bottom: 25px; }
+.etiqueta { color: #d99720; font-weight: bold; font-size: 12px; letter-spacing: 2px; }
+.portada-sello { border: 2px solid rgba(243,181,68,.8); border-radius: 50%; width: 190px; height: 190px; flex-shrink: 0; display: grid; place-content: center; text-align: center; color: #f3b544; letter-spacing: 2px; transform: rotate(8deg); }
+.portada-sello strong { font-size: 19px; }
+.boton { border: 0; border-radius: 6px; padding: 12px 19px; display: inline-block; cursor: pointer; font-weight: bold; text-align: center; transition: .2s; }
+.boton:hover { transform: translateY(-2px); filter: brightness(1.05); }
+.boton-primario { background: #f3b544; color: #182b3b; }
+.boton-secundario { background: #e5eaf0; color: #263747; }
+.beneficios { background: #f3f6f8; border-bottom: 1px solid #e5e9ed; }
+.beneficios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; padding: 22px 0; }
+.beneficios article { display: flex; align-items: center; gap: 12px; }
+.beneficios article > span { color: #c8891e; font-size: 25px; font-weight: bold; }
+.beneficios strong, .beneficios small { display: block; }
+.beneficios small { color: #71808e; }
+.seccion { padding: 72px 0; }
+.seccion-clara { background: #f5f7f9; }
+.titulo-seccion { text-align: center; margin-bottom: 35px; }
+.titulo-seccion h2 { font-size: 32px; color: #172c3d; margin: 5px 0; }
+.titulo-seccion p:last-child { color: #687786; }
+.productos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px; }
+.producto { background: white; border: 1px solid #e5e9ed; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 18px rgba(20,37,54,.06); display: flex; flex-direction: column; }
+.producto img { width: 100%; height: 175px; object-fit: cover; background: #edf1f4; }
+.producto-info { padding: 16px; display: flex; flex-direction: column; flex: 1; }
+.producto-info h3 { color: #1b3042; font-size: 17px; margin-bottom: 6px; }
+.producto-info p { color: #6c7a87; font-size: 13px; flex: 1; margin-bottom: 12px; }
+.precio { color: #bd8017; font-weight: 800; font-size: 18px; margin-bottom: 12px; }
+.producto .boton { width: 100%; }
+.tabla-contenedor { overflow-x: auto; background: white; border-radius: 9px; border: 1px solid #e2e7eb; }
+.tabla-carrito { width: 100%; border-collapse: collapse; min-width: 680px; }
+.tabla-carrito th, .tabla-carrito td { padding: 14px; border-bottom: 1px solid #e9edf0; text-align: center; }
+.tabla-carrito th { background: #eaf0f4; color: #23394b; font-size: 13px; }
+.tabla-carrito td:first-child { text-align: left; font-weight: bold; }
+.carrito-vacio { text-align: center !important; color: #71808e; padding: 30px !important; }
+.cantidad { width: 65px; padding: 7px; border: 1px solid #cbd4dc; border-radius: 5px; }
+.boton-eliminar { background: #fce9e7; color: #a83228; border: 0; padding: 7px 10px; border-radius: 5px; cursor: pointer; }
+.resumen { width: min(100%, 390px); margin: 22px 0 0 auto; background: white; border: 1px solid #e2e7eb; border-radius: 9px; padding: 20px; }
+.resumen p { display: flex; justify-content: space-between; margin: 6px 0; }
+.resumen .total { border-top: 1px solid #e4e8eb; padding-top: 12px; margin-top: 12px; font-size: 19px; color: #172c3d; }
+.acciones-carrito { display: flex; gap: 10px; margin-top: 17px; }
+.acciones-carrito .boton { flex: 1; font-size: 13px; }
+.aviso { color: #a05f0b; font-size: 13px; margin-top: 10px; }
+.formulario { max-width: 760px; margin: auto; display: grid; grid-template-columns: 1fr 1fr; gap: 18px; background: #f5f7f9; padding: 28px; border-radius: 10px; }
+.campo { display: flex; flex-direction: column; gap: 6px; }
+.campo label { font-weight: bold; font-size: 14px; }
+.campo input { width: 100%; border: 1px solid #cbd4dc; border-radius: 6px; padding: 12px; background: white; }
+.campo input:focus { outline: 2px solid #f3b544; border-color: #d99a2b; }
+.campo-completo { grid-column: 1 / -1; }
+.nota { text-align: center; color: #788692; font-size: 12px; margin-top: 18px; }
+.pie { background: #142536; color: #dce4eb; padding-top: 38px; }
+.pie-contenido { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 25px; padding-bottom: 30px; }
+.logo-pie { color: white; }
+.pie p { font-size: 13px; color: #b8c5d0; margin-top: 7px; }
+.copyright { text-align: center; padding: 15px; border-top: 1px solid #304252; color: #aebbc6; font-size: 12px; }
+@media (max-width: 900px) { .productos-grid { grid-template-columns: repeat(2, 1fr); } .portada-sello { width: 145px; height: 145px; } }
+@media (max-width: 620px) {
+    .barra { flex-direction: column; padding: 14px 0; }
+    .menu { width: 100%; justify-content: center; flex-wrap: wrap; gap: 12px 18px; }
+    .portada-contenido { padding: 55px 0; }
+    .portada-sello { display: none; }
+    .beneficios-grid { grid-template-columns: 1fr; gap: 12px; }
+    .seccion { padding: 50px 0; }
+    .titulo-seccion h2 { font-size: 27px; }
+    .productos-grid { grid-template-columns: 1fr; }
+    .producto img { height: 210px; }
+    .formulario { grid-template-columns: 1fr; padding: 20px; }
+    .campo-completo { grid-column: auto; }
+    .pie-contenido { grid-template-columns: 1fr; }
+    .acciones-carrito { flex-direction: column; }
+}
